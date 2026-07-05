@@ -52,8 +52,8 @@ jobs:
         uses: peter-evans/create-pull-request@v8
         with:
           branch: bot/update-flutter-${{ steps.latest.outputs.version }}
-          commit-message: Update Flutter to ${{ steps.latest.outputs.version }}
-          title: Update Flutter to ${{ steps.latest.outputs.version }}
+          commit-message: "chore: update Flutter to ${{ steps.latest.outputs.version }}"
+          title: "chore: update Flutter to ${{ steps.latest.outputs.version }}"
           body: |
             Updates the base image Flutter SDK version to `${{ steps.latest.outputs.version }}`.
 
