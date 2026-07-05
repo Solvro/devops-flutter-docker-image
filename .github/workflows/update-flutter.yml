@@ -21,8 +21,8 @@ jobs:
         run: |
           set -euo pipefail
           latest=$(
-            curl --fail --silent https://api.github.com/repos/flutter/flutter/releases/latest \
-              | jq -r '.tag_name | sub("^v"; "")'
+            curl --fail --silent https://storage.googleapis.com/flutter_infra_release/releases/releases_linux.json \
+              | jq -r '.current_release.stable as $stable | .releases[] | select(.hash == $stable) | .version'
           )
           if [ -z "$latest" ] || [ "$latest" = "null" ]; then
             echo "Could not resolve latest Flutter release" >&2
