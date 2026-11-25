@@ -59,4 +59,5 @@ jobs:
 
             The publish workflow will build and push:
             - `ghcr.io/solvro/flutter-web-only:${{ steps.latest.outputs.version }}`
+            - `ghcr.io/solvro/flutter-web-only:stable`
           labels: dependencies, flutter

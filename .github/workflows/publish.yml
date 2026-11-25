@@ -58,3 +58,4 @@ jobs:
             FLUTTER_STABLE_VERSION=${{ steps.versions.outputs.flutter }}
           tags: |
             ${{ steps.image.outputs.name }}:${{ steps.versions.outputs.flutter }}
+            ${{ steps.image.outputs.name }}:stable
